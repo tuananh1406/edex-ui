@@ -164,3 +164,9 @@ Huge thanks to [Rob "Arscan" Scanlon](https://github.com/arscan) for making the 
 ## Licensing
 
 Licensed under the [GPLv3.0](https://github.com/GitSquared/edex-ui/blob/master/LICENSE).
+
+
+## Fixed issues
+- Need to run node 18 (Can use nvm)
+- MacOS need install xcode (Check by run: /usr/bin/xcodebuild -version)
+- Sometimes MacOS cannot install xcode, need to run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer

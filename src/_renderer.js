@@ -47,6 +47,7 @@ const fontsDir = path.join(settingsDir, "fonts");
 const settingsFile = path.join(settingsDir, "settings.json");
 const shortcutsFile = path.join(settingsDir, "shortcuts.json");
 const lastWindowStateFile = path.join(settingsDir, "lastWindowState.json");
+const signale = require("signale");
 
 // Load config
 window.settings = require(settingsFile);
@@ -288,7 +289,7 @@ async function displayTitleScreen() {
 
     document.body.setAttribute("class", "");
     bootScreen.setAttribute("class", "center");
-    bootScreen.innerHTML = "<h1>eDEX-UI</h1>";
+    bootScreen.innerHTML = "<h1>Hữu Tuấn Anh</h1>";
     let title = document.querySelector("section > h1");
 
     await _delay(200);
@@ -489,7 +490,8 @@ async function initUI() {
     };
     window.term[0].term.writeln("\033[1m"+`Welcome to eDEX-UI v${electron.remote.app.getVersion()} - Electron v${process.versions.electron}`+"\033[0m");
 
-    await _delay(100);
+    await _delay(1000);
+    window.term[0].term.writeln("\033[1m"+`Welcome to eDEX-UI v${electron.remote.app.getVersion()} - Electron v${process.versions.electron}`+"\033[0m");
 
     window.fsDisp = new FilesystemDisplay({
         parentId: "filesystem"

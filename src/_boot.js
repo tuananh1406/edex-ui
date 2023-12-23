@@ -71,6 +71,7 @@ try {
     signale.info(`Base config dir is ${electron.app.getPath("userData")}`);
 }
 // Create default settings file
+signale.info(`Setting file is ${settingsFile}`);
 if (!fs.existsSync(settingsFile)) {
     fs.writeFileSync(settingsFile, JSON.stringify({
         shell: (process.platform === "win32") ? "powershell.exe" : "bash",
@@ -178,7 +179,7 @@ function createWindow(settings) {
     let {x, y, width, height} = display.bounds;
     width++; height++;
     win = new BrowserWindow({
-        title: "eDEX-UI",
+        title: "Hữu Tuấn Anh",
         x,
         y,
         width,
@@ -236,7 +237,7 @@ app.on('ready', async () => {
     Object.assign(cleanEnv, {
         TERM: "xterm-256color",
         COLORTERM: "truecolor",
-        TERM_PROGRAM: "eDEX-UI",
+        TERM_PROGRAM: "Hữu Tuấn Anh",
         TERM_PROGRAM_VERSION: app.getVersion()
     }, settings.env);
 
